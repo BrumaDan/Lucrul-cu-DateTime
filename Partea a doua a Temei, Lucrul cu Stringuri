@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SecondHomeWorkSecondPart
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter something");
+            string userInput = Console.ReadLine();
+
+            int elementsCounter = userInput.Count();
+            Console.WriteLine($"This example counted the characters in a string, Your string has {elementsCounter} characters");
+            
+            string replaceCharsInString = userInput.Replace('a','f');
+            Console.WriteLine($"This example replaced all 'a' characters with 'f' characters in a string, Your string was {userInput} after is {replaceCharsInString}");
+
+            bool isEmptyOrNull = string.IsNullOrEmpty(userInput);
+            Console.WriteLine($"This example checks if the string is null or empty, it returns true or false. Is The string null or empty {isEmptyOrNull}");
+
+            if (!isEmptyOrNull)
+            {
+                char getsFirstElement = userInput.First();
+                Console.WriteLine($"This example returns first character of the string which is {getsFirstElement}");
+
+                char elementAtIndex = userInput.ElementAt(3);
+                Console.WriteLine($"This example gets the character at index specified by user.In the your string the 4th element is {elementAtIndex}");
+
+            }
+
+            bool stringContains = userInput.Contains('t');
+            Console.WriteLine($"This example searches if the specified charcater exists in the string. Does your string contains char 't' {stringContains}");
+
+            string changeCharsToLower = userInput.ToLower();
+            Console.WriteLine($"This example sets all characters to lower, inital string was {userInput} after is {changeCharsToLower}");
+        }   
+
+    }
+}
