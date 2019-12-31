@@ -26,12 +26,13 @@ namespace SecondHomework
             DateTime birthDate = new DateTime(birthYear, birthMonth, birthDay);
             DateTime currentDate = DateTime.Now;
             TimeSpan userAge = currentDate.Subtract(birthDate);
+            int daysInYear = 365;
 
             Console.WriteLine($"Today's date is {currentDate.ToString("D")}");
             Console.WriteLine($"Your Birthdate is {birthDate.ToString("D")}");
-            Console.WriteLine($"Your age is {(int)userAge.TotalDays / 365} years");
+            Console.WriteLine($"Your age is {(int)userAge.TotalDays / daysInYear} years");
 
-            int age = int.Parse((userAge.Days/365).ToString());
+            int age = int.Parse((userAge.Days/ daysInYear).ToString());
 
             Gender? userGender= null;
             SetGender(ref userGender);
