@@ -59,13 +59,14 @@ namespace SecondHomework
 
         static void GetFemaleRetirement(int age)
         {
-            if (age > 63)
+            int femaleLegalRetirementAge = 63;
+            if (age > femaleLegalRetirementAge)
             {
-                Console.WriteLine($"User is retired for {age - 63} years");
+                Console.WriteLine($"User is retired for {age - femaleLegalRetirementAge} years");
             }
-            else if (age < 63)
+            else if (age < femaleLegalRetirementAge)
             {
-                Console.WriteLine($"User has {63 - age} years until retirement");
+                Console.WriteLine($"User has {femaleLegalRetirementAge - age} years until retirement");
             }
             else
             {
@@ -77,13 +78,14 @@ namespace SecondHomework
 
         static void GetMaleRetirement(int age)
         {
-            if (age > 65)
+            int maleLegalRetirementAge = 65;
+            if (age > maleLegalRetirementAge)
             {
-                Console.WriteLine($"User is retired for {age - 65} years");
+                Console.WriteLine($"User is retired for {age - maleLegalRetirementAge} years");
             }
-            else if (age < 65)
+            else if (age < maleLegalRetirementAge)
             {
-                Console.WriteLine($"User has {65 - age} years until retirement");
+                Console.WriteLine($"User has {maleLegalRetirementAge - age} years until retirement");
             }
             else
             {
@@ -108,17 +110,11 @@ namespace SecondHomework
             else
             {
                 gender = null;
-                Console.WriteLine("Neither");
+              
             }
 
 
-
         }
-
-
-
-
-
 
 
     static int GetValidDay(int year, int month)
